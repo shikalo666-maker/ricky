@@ -246,7 +246,7 @@ const GameTypeCard = ({
       </div>
       <div className="text-right">
         <span className="block text-[10px] font-mono opacity-50 uppercase tracking-widest">Difficulty</span>
-        <span className="text-xs font-mono font-bold">{title === 'Hearts' ? 'K' : title === 'Spades' ? 'Q' : '10'}</span>
+        <span className="text-xs font-mono font-bold">{title === 'Hearts' ? 'K' : title === 'Spades' ? 'Q' : 'J'}</span>
       </div>
     </div>
     
@@ -283,6 +283,7 @@ const CharacterCard = ({ name, stats, image }: { name: string, stats: number[], 
         alt={name} 
         className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
         loading="lazy"
+        referrerPolicy="no-referrer"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80" />
       <div className="absolute bottom-2 left-2 right-2">
@@ -522,22 +523,22 @@ export default function App() {
               <CharacterCard 
                 name="Chishiya" 
                 stats={[95, 20, 100, 10]} 
-                image="input_file_1.png" 
+                image="https://picsum.photos/seed/chishiya_vibe_1/400/600" 
               />
               <CharacterCard 
                 name="Usagi" 
                 stats={[40, 95, 60, 80]} 
-                image="input_file_2.png" 
+                image="https://picsum.photos/seed/usagi_vibe_1/400/600" 
               />
               <CharacterCard 
                 name="Arisu" 
                 stats={[90, 40, 95, 30]} 
-                image="input_file_3.png" 
+                image="https://picsum.photos/seed/arisu_vibe_1/400/600" 
               />
               <CharacterCard 
                 name="Kuina" 
                 stats={[30, 90, 50, 95]} 
-                image="input_file_0.png" 
+                image="https://picsum.photos/seed/kuina_vibe_1/400/600" 
               />
             </div>
             <button className="w-full mt-6 py-3 border border-white/10 rounded-lg text-[10px] uppercase tracking-widest font-bold hover:bg-white/5 transition-all flex items-center justify-center gap-2">
@@ -573,7 +574,7 @@ export default function App() {
               <ChallengeItem id="01" title="Tag" difficulty="5 of Spades" active={activeChallenge === '01'} onClick={() => setActiveChallenge('01')} />
               <ChallengeItem id="02" title="Hide and Seek" difficulty="7 of Hearts" active={activeChallenge === '02'} onClick={() => setActiveChallenge('02')} />
               <ChallengeItem id="03" title="Distance" difficulty="4 of Clubs" active={activeChallenge === '03'} onClick={() => setActiveChallenge('03')} />
-              <ChallengeItem id="04" title="Witch Hunt" difficulty="10 of Hearts" active={activeChallenge === '04'} onClick={() => setActiveChallenge('04')} />
+              <ChallengeItem id="04" title="Witch Hunt" difficulty="J of Hearts" active={activeChallenge === '04'} onClick={() => setActiveChallenge('04')} />
             </div>
             
             <button className="w-full mt-6 py-3 bg-netflix-red/10 border border-netflix-red/20 rounded-lg text-[10px] uppercase tracking-widest font-bold hover:bg-netflix-red/20 transition-all text-netflix-red">
